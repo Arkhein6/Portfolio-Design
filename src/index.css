@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	background-color: #101630;
+}
+.Python:hover {
+	filter: drop-shadow(-20px -2px 20px #496e86) 
+  drop-shadow(20px 5px 20px #635c3c);
+}
+
+.CSS3:hover {
+  filter:  drop-shadow(20px 0 20px #3a6172) drop-shadow(-20px 0 20px #43657c)
+}
+.TailwindCSS:hover {
+  filter: drop-shadow(0 0 30px #00D8FF)
+}
+.MongoDB:hover {
+  filter: drop-shadow(0 0 30px #13aa52)
+}
+
+.HTML5:hover {
+  filter:  drop-shadow(20px 0 20px #8a5b47) drop-shadow(-20px 0 20px #884e3f)
+}
+.Javascript:hover {
+  filter: drop-shadow(0 0 25px #b8aa47)
+}
+.ReactJS:hover {
+  filter: drop-shadow(0 0 20px #00D8FF)
+}
+.NodeJS:hover {
+  filter: drop-shadow(0 0 20px #13aa52);
+}
