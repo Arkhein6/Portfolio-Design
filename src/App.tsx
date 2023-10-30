@@ -26,8 +26,9 @@ const App = () => {
 						Click Me
 					</div>
 					<div className="sm:flex uppercase gap-10 hidden items-center font-bold">
-						{headerData.map((link) => (
+						{headerData.map((link,index) => (
 							<a
+							key={index}
 								href={`#${link.id}`}
 								onClick={() => setActiveHeaderLink(link.id)}
 								className={`${
@@ -65,7 +66,7 @@ const App = () => {
 						Previous Project
 					</a>
 				</section>
-				<section id="ABOUT_ME" className="flex flex-col">
+				<section id="ABOUT_ME" className="flex flex-col sm:flex-row">
 					<ImageCard
 						imageSource={developerData.imageSource}
 						isDeveloper={true}
@@ -163,7 +164,7 @@ const App = () => {
 					<div className="grid grid-cols-2 sm:grid-cols-4 w-full place-items-center gap-y-16 ">
 						{experienceData.map((experience, index) => {
 							return (
-								<div className="flex-col flex gap-3">
+								<div key={index} className="flex-col flex gap-3">
 									<img
 										className={`cursor-pointer bg-transparent ${experience.title}`}
 										key={index}
@@ -179,7 +180,7 @@ const App = () => {
 					</div>
 				</section>
 			</main>
-			<footer className=" bg-gradient-to-r from-violet-700 to-[#52B6D8] relative rounded-tr-[5rem] rounded-tl-[5rem] before:contents sm:before:w-52 sm:before:h-52 before:w-28 before:h-28 before:rounded-[50%] sm:before:-top-[80px] before:-top-[25px] sm:before:-left-24 before:-left-14 before:bg-emerald-500/30 before:absolute after:contents sm:after:w-52 after:w-28 sm:after:h-52 after:h-28 after:rounded-[50%] sm:after:-top-[80px] after:-top-[25px] sm:after:-right-24 after:-right-14 after:bg-lime-500/30 after:absolute">
+			<footer className="bg-gradient-to-r from-[#512da8] from-40% to-[#42a5f5] to-84% relative rounded-tr-[5rem] rounded-tl-[5rem] before:contents sm:before:w-52 sm:before:h-52 before:w-28 before:h-28 before:rounded-[50%] sm:before:-top-[80px] before:-top-[25px] sm:before:-left-24 before:-left-14 before:bg-emerald-300/30 before:absolute after:contents sm:after:w-52 after:w-28 sm:after:h-52 after:h-28 after:rounded-[50%] sm:after:-top-[80px] after:-top-[25px] sm:after:-right-24 after:-right-14 after:bg-lime-500/30 after:absolute">
 				<div
 					id="CONTACT_ME"
 					className=" w-[90%] sm:w-[80%] mx-auto flex-col flex items-center gap-5 py-3"
@@ -190,7 +191,7 @@ const App = () => {
 							<h2 className="text-white font-bold text-xl">
 								Drop Me a Message
 							</h2>
-							<p className="text-[#686A7E]">
+							<p className="text-[#9791F4]">
 								Lorem ipsum dolor sit amet consectetur,
 								adipisicing elit. Illo officia quas quibusdam
 								modi labore nemo eveniet esse, officiis quod
@@ -230,7 +231,7 @@ const App = () => {
 								</div>
 							</div>
 						</div>
-						<div className="flex flex-col gap-2  rounded-lg bg-[#52B6D8] min-w-[300px] max-w-[400px] px-2 py-4 sm:px-4 sm:py-6">
+						<div className="flex flex-col gap-2  rounded-lg bg-gradient-to-l from-[#512da8] from-10% to-[#42a5f5] to-80% min-w-[300px] max-w-[400px] px-2 py-4 sm:px-4 sm:py-6">
 							<input
 								type="text"
 								placeholder="Name"
